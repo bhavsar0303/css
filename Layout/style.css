@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+    margin: 0%;
+}
+
+.heading {
+    height: 90px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+
+}
+
+.logo {
+    height: 80px;
+    width: 5%;
+    margin-top: 10px;
+    margin-left: 5%;
+}
+
+.logo img {
+    height: 70px;
+    width: 100%;
+}
+
+.list {
+    height: 80px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+
+}
+
+.l1 {
+    height: 40px;
+    width: 60%;
+    display: flex;
+    text-align: center;
+    margin-top: 25px;
+
+}
+
+li {
+    list-style: none;
+    padding: 10px;
+    color: white;
+
+}
+
+.l2 {
+    height: 40px;
+    width: 30%;
+    display: flex;
+    margin-top: 25px;
+    margin-left: 5px;
+
+}
+
+.l3 {
+    height: 40px;
+    width: 20%;
+    color: white;
+    margin-top: 30px;
+}
+
+i {
+    padding-left: 20px;
+}
+
+.photo {
+    height: 600px;
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+b
+{position: absolute;
+    font-size: 100px;
+    color: white;
+    margin-top: 5%;
+    padding-left: 2%;
+}
+.i9
+{position: absolute;
+margin-top: 13%;
+color: white;
+font-size: 40px;
+margin-left: 2%;}
+.photo img {
+    height: 600px;
+    width: 100%;
+}
+
+
+
+.name {
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.main {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    margin-top: 5%;
+}
+
+.a {
+    height: 200px;
+    width: 15%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.a img {
+    height: 200px;
+    width: 100%;
+}
+
+.b {
+    height: 200px;
+    width: 15%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.b img {
+    height: 200px;
+    width: 100%;
+}
+
+.c {
+    height: 200px;
+    width: 15%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.c img {
+    height: 200px;
+    width: 100%;
+}
+
+.d {
+    height: 200px;
+    width: 15%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.d img {
+    height: 200px;
+    width: 100%;
+}
+
+.lest {
+    height: 300px;
+    width: 100%;
+    background-color: black;
+    margin-top: 5%;
+}
+
+.m1 {
+    height: 80px;
+    width: 100%;
+    color: white;
+    display: flex;
+}
+
+.m1 li {
+    margin-top: 2%;
+}
+
+p {
+    height: 40px;
+    width: 90%;
+    color:aqua;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+}
+
+h4 {
+    height: 10px;
+    width: 50%;
+    color: white;
+    margin-top: 5%;
+}
