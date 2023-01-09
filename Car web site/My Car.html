@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="Mobile.css">
+  <link rel="stylesheet" href="css/slider.css">
+  <link rel="stylesheet" href="teblet.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+
+</head>
+
+<body>
+  <div class="maindiv">
+    <div class="logo">
+      <img src="photo5.png" alt="">
+
+    </div>
+    <div class="name">
+      <ul>
+        <li> <a href="My Car.html">Home</a></li>
+        <li><a href="content us.html">content us</a></li>
+        <li><a href="Connect to Service.html">Connect to Service</a></li>
+        <li><a href="find car.html">Find a Car</a></li>
+      </ul>
+
+
+    </div>
+  </div>
+  <div class="sublist">
+    <h1>CONFIGURATOR</h1>
+    <b>HURACÁN</b>
+
+
+
+    <img src="photo6.jpg" alt="">
+
+  </div>
+  <div class="nav">
+    <h5>Models</h5>
+  </div>
+  <div class="newdiv">
+    <div class="slideshow">
+      <div class="holder">
+        <div class="slide-1">Lamborghini Urus</div>
+        <div class="slide-2"></div>
+        <div class="slide-3">Lamborghini Huracan EVO</div>
+        <div class="slide-4"></div>
+        <div class="slide-5">Lamborghini Aventador</div>
+      </div>
+    </div>
+
+    <div class="steps">
+
+    </div>
+
+   
+  </div>
+  </div>
+
+
+
+  <div class="list1">
+    <h3>WHAT'S NEW</h3>
+    <br>
+    <h2>See what’s happening</h2>
+  </div>
+  <div class="newphoto">
+    <div class="p1">
+      <img src="photo1.jpg" alt="">
+    </div>
+    <div class="p2">
+      <img src="photo2.jpg" alt="">
+    </div>
+
+    <div class="p3">
+      <img src="photo3.jpg" alt="">
+    </div>
+    <div class="p4">
+      <img src="photo4.jpg" alt="">
+    </div>
+  </div>
+  <div class="lastdiv">
+    <div class="m1">
+      The consumption and emissions values in the website refer to your geographical IP. This value might be unrealistic if you navigate using VPN or if the position of your Internet provider is imprecise. If you believe you are incorrectly geolocalized, contact your dealer to get valid consumption and emissions information in your area.
+    </div>
+    <div class="m2">
+      <i class="fa fa-car" style="font-size:36px;"></i>
+      <i class="fa fa-map-marker" style="font-size:36px;"></i>
+      <i class="fa fa-facebook" style="font-size:36px;"></i><i class="fa fa-user-circle-o" style="font-size:36px;"></i><i class="fa fa-twitter" style="font-size:36px;"></i><i class="fa fa-whatsapp" style="font-size:36px;"></i><i class="fa fa-instagram" style="font-size:36px;"></i>
+
+    </div>
+    <div class="m3">
+      Fuel consumption and emission values of all vehicles promoted on this page*; Fuel consumption combined: 19,5-12,7 l/100km (WLTP); CO2-emissions combined: 448-320 g/km (WLTP); Under homologation: Huracan Sterrato
+    </div>
+    <div class="m4">
+      Copyright © 2023All rights reserved. VAT no. IT 00591801204
+    </div>
+    
+    
+    
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/slideshow.js"></script>
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36251023-1']);
+    _gaq.push(['_setDomainName', 'jqueryscript.net']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+  <script>
+    var currentSlide = 0
+
+    //here we set how many slides we have using the .length property
+    //this is useful because we can use it as our max slide value
+    var totalSlides = $('.holder div').length
+
+
+    // 1. a function that deals with taking us to the next slide
+    var nextSlide = function () {
+      // increment our currentSlide value by reassigning it and increlenting 	   it by 1
+      currentSlide = currentSlide + 1
+
+      //a continuacion ponemos este codigo para que nuestras slides y numeros no sigan avanzando cuando lleguen a la 4ta
+      //
+      if (currentSlide >= totalSlides) {
+        currentSlide = 0
+      }
+      // we are going to turn our currentSlide value into a negative vw unit
+      var leftPosition = (-currentSlide * 100) + 'vw'
+      // here we add the 'vw' unit into the end
+
+      // pass the vw unit into our css method below
+      //here we grab the holder and change it to the second slide
+      $('.holder').css('left', leftPosition)
+
+      var slideNumber = currentSlide + 1
+      // here we set the text for the steps using currentSlide and total nubmer
+      $('.steps').text(slideNumber + ' / ' + totalSlides)
+    }
+
+    //2. a function that deals with taking us to the previous slide
+
+    var previousSlide = function () {
+      //this is identical to our nextSlide function, apart from that we are decrementing the currentSlide value (taking us back rather than fowards)
+      currentSlide = currentSlide - 1
+
+      //a continuacion ponemos este codigo para que nuestras slides y numeros no sigan retrocediendo cuando lleguen al 0
+      //
+      if (currentSlide < 0) {
+        currentSlide = totalSlides - 1
+      }
+
+      var leftPosition = (-currentSlide * 100) + 'vw'
+      $('.holder').css('left', leftPosition)
+
+      var slideNumber = currentSlide + 1
+      // here we set the text for the steps using currentSlide and total nubmer
+      $('.steps').text(slideNumber + ' / ' + totalSlides)
+    }
+
+    //setInterval allows us to run a function every x amount of time
+    var autoSlide = setInterval(function () {
+      // here our nextSlide function will be run
+      nextSlide()
+      // runs every 3seconds (3000ms)
+    }, 3000)
+
+    //we also have setTimeout, wich is the same, but runs only once
+
+    $('.next').on('click', function () {
+      //this is going to cancel our autoSlide interval function
+      //as the user has taken over control of the slideshow
+      clearInterval(autoSlide)
+      // here we call the nextSlide function and fo to the next slide
+      nextSlide()
+    })
+
+
+    $('.prev').on('click', function () {
+      clearInterval(autoSlide)
+      previousSlide()
+    })
+
+    $('body').on('keydown', function (event) {
+      var keyCode = event.keyCode
+      if (keyCode == 37) {
+        clearInterval(autoSlide)
+        previousSlide()
+      }
+      if (keyCode == 39) {
+        clearInterval(autoSlide)
+        nextSlide()
+      }
+    })
+  </script>
+
+
+
+</body>
+
+</html>
